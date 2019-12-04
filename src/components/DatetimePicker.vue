@@ -1,21 +1,7 @@
 <template>
   <v-dialog v-model="display" :width="dialogWidth">
     <template v-slot:activator="{ on }">
-      <v-text-field
-        v-bind="textFieldProps"
-        :disabled="disabled"
-        :loading="loading"
-        :label="label"
-        :value="formattedDatetime"
-        v-on="on"
-        readonly
-      >
-        <template v-slot:progress>
-          <slot name="progress">
-            <v-progress-linear color="primary" indeterminate absolute height="2"></v-progress-linear>
-          </slot>
-        </template>
-      </v-text-field>
+      <v-icon class="input-m-icon" v-on="on">mdi-calendar-clock</v-icon>
     </template>
 
     <v-card>
